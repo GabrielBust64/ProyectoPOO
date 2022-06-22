@@ -1,8 +1,9 @@
-import java.util.Scanner;
+package Principal;
+
+import GUI.GUIAdminLogin;
 
 public class Principal {
     public static void main(String[] args) {
-
-        System.out.println("Test2");
+        new GUIAdminLogin();
     }
 }
