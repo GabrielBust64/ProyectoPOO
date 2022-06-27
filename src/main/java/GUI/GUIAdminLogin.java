@@ -4,6 +4,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import Principal.EncrypterDecrypter;
 
 public class GUIAdminLogin implements ActionListener {
     private JPanel mainPanel;
@@ -35,9 +36,7 @@ public class GUIAdminLogin implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        // TODO Buscar contraseña en DB
-        String passwordText = String.valueOf(this.password.getPassword());
-        if(passwordText.equals("patata")){
+        if(EncrypterDecrypter.checkPassword(password.getPassword())){
             this.etiqueta.setText("Contraseña correcta");
             new GUIAdmin("");
             mainFrame.dispose();

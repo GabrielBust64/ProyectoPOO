@@ -4,11 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6a8bb48d-e6e5-4c32-900b-c61a6cbab897" name="Changes" comment="Commit de Prueba 2do PC">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/GUI/GUIAdmin.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/GUI/GUITesting.java" afterDir="false" />
+    <list default="true" id="6a8bb48d-e6e5-4c32-900b-c61a6cbab897" name="Changes" comment="Commit de Prueba">
+      <change afterPath="$PROJECT_DIR$/src/main/java/GUI/GUIAdminLogin.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/GUI/GUIAdmin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUI/GUIAdmin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/GUI/GUITesting.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUI/GUITesting.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Principal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Principal.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,21 +38,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/bpgab/IdeaProjects/ProyectoPOO&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/home/gabriel/IdeaProjects/ProyectoPOO",
+    "settings.editor.selected.configurable": "vcs.Git"
   }
-}</component>
-  <component name="RunManager" selected="Application.GUI.GUITesting">
-    <configuration name="GUI.GUITesting" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+}]]></component>
+  <component name="RunManager" selected="Application.GUITesting">
+    <configuration name="GUITesting" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="GUI.GUITesting" />
       <module name="ProyectoPOO" />
       <extension name="coverage">
@@ -73,7 +70,7 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.GUI.GUITesting" />
+        <item itemvalue="Application.GUITesting" />
         <item itemvalue="Application.Principal" />
       </list>
     </recent_temporary>
@@ -95,14 +92,7 @@
       <option name="project" value="LOCAL" />
       <updated>1654208876595</updated>
     </task>
-    <task id="LOCAL-00002" summary="Commit de Prueba 2do PC">
-      <created>1655427147313</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1655427147313</updated>
-    </task>
-    <option name="localTasksCounter" value="3" />
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -121,7 +111,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial Commit" />
-    <MESSAGE value="Commit de Prueba 2do PC" />
-    <option name="LAST_COMMIT_MESSAGE" value="Commit de Prueba 2do PC" />
+    <option name="LAST_COMMIT_MESSAGE" value="Initial Commit" />
   </component>
 </project>
