@@ -61,7 +61,8 @@ public class GUIAdminLogin implements ActionListener {
         // TODO Buscar contraseña en DB
         if(DBManager.checkPassword(this.password.getPassword())){
             this.etiqueta.setText("Contraseña correcta");
-            new GUIAdmin(DBManager.getHistorial(),"Admin", DBManager.getRequests());
+            // new GUIAdmin(DBManager.getHistorial(),"Admin", DBManager.getRequests());
+            new GUIAdmin(new Object[][]{{"199002430","patata","roto","brigido"}},"Admin", DBManager.getRequests());
             mainFrame.dispose();
         }else{
             this.etiqueta.setText("Contraseña incorrecta");

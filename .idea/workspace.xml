@@ -4,12 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6a8bb48d-e6e5-4c32-900b-c61a6cbab897" name="Changes" comment="1era prueba de GUI">
-      <change afterPath="$PROJECT_DIR$/src/main/java/GUI/GUITest.java" afterDir="false" />
+    <list default="true" id="6a8bb48d-e6e5-4c32-900b-c61a6cbab897" name="Changes" comment="Avance en GUI">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/GUI/GUIAdmin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUI/GUIAdmin.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/GUI/GUIAdminLogin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUI/GUIAdminLogin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Principal/EncrypterDecrypter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Principal/DBManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Principal/DBManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Principal/DBManager.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,17 +37,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "UI_DESIGNER_EDITOR_MODE.PaletteManager.STATE": "right",
-    "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.STATE": "left",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/bpgab/~/IdeaProjects/ArtOfWar",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;UI_DESIGNER_EDITOR_MODE.PaletteManager.STATE&quot;: &quot;right&quot;,
+    &quot;UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.STATE&quot;: &quot;left&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/bpgab/~/IdeaProjects/ArtOfWar&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Application.Principal.Principal">
     <configuration name="GUITest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="GUI.GUITest" />
@@ -129,7 +128,14 @@
       <option name="project" value="LOCAL" />
       <updated>1655925953472</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Avance en GUI">
+      <created>1656808678016</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1656808678016</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -149,6 +155,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial Commit" />
     <MESSAGE value="Acomodar clases y eliminar pruebas para que se lancen desde Principal" />
-    <option name="LAST_COMMIT_MESSAGE" value="Acomodar clases y eliminar pruebas para que se lancen desde Principal" />
+    <MESSAGE value="Avance en GUI" />
+    <option name="LAST_COMMIT_MESSAGE" value="Avance en GUI" />
   </component>
 </project>

@@ -1,6 +1,7 @@
 package Principal;
 
 import javax.management.ObjectName;
+import java.util.ArrayList;
 
 public class DBManager {
     public static boolean checkPassword(char[] password){
@@ -14,12 +15,12 @@ public class DBManager {
     }
 
     public static String hasher(String s){
-        //TODO Hacer un algoritmo Hash
+        // TODO Hacer un algoritmo Hash
         return s;
     }
 
     public static Object[][] getHistorial() {
-        return new Object[][]{{"199002430","123","Prestado","Buen estado"}};
+        return new Object[][]{{"199002430","124","Prestado","Buen estado"}};
 
     }
 
@@ -27,4 +28,7 @@ public class DBManager {
         return new Object[][] {{"123456789","Esperando..."}};
     }
 
+    public static void sendData(ArrayList<String[]> datosHistorial, ArrayList<String[]> datosEspera) {
+        // TODO enviar datosHistorial y datosEspera a la BD
+    }
 }
