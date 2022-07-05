@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6a8bb48d-e6e5-4c32-900b-c61a6cbab897" name="Changes" comment="Avance en GUI">
+    <list default="true" id="6a8bb48d-e6e5-4c32-900b-c61a6cbab897" name="Changes" comment="GUI Terminada, falta debugging">
+      <change afterPath="$PROJECT_DIR$/src/main/java/EndUserInterface/GUI.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/EndUserInterface/Principal.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/GUI/GUIAdmin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUI/GUIAdmin.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/GUI/GUIAdminLogin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUI/GUIAdminLogin.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Principal/DBManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Principal/DBManager.java" afterDir="false" />
     </list>
@@ -48,7 +49,7 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
 }</component>
-  <component name="RunManager" selected="Application.Principal.Principal">
+  <component name="RunManager" selected="Application.Principal">
     <configuration name="GUITest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="GUI.GUITest" />
       <module name="ProyectoPOO" />
@@ -68,6 +69,19 @@
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="GUI.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Principal" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="EndUserInterface.Principal" />
+      <module name="ProyectoPOO" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="EndUserInterface.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -97,6 +111,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Principal" />
         <item itemvalue="Application.Principal.Principal" />
         <item itemvalue="Application.GUITest" />
         <item itemvalue="Application.a" />
@@ -135,7 +150,14 @@
       <option name="project" value="LOCAL" />
       <updated>1656808678016</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="GUI Terminada, falta debugging">
+      <created>1656883822133</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1656883822133</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -156,6 +178,7 @@
     <MESSAGE value="Initial Commit" />
     <MESSAGE value="Acomodar clases y eliminar pruebas para que se lancen desde Principal" />
     <MESSAGE value="Avance en GUI" />
-    <option name="LAST_COMMIT_MESSAGE" value="Avance en GUI" />
+    <MESSAGE value="GUI Terminada, falta debugging" />
+    <option name="LAST_COMMIT_MESSAGE" value="GUI Terminada, falta debugging" />
   </component>
 </project>

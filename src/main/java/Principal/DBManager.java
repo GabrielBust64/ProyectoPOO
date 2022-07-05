@@ -1,6 +1,5 @@
 package Principal;
 
-import javax.management.ObjectName;
 import java.util.ArrayList;
 
 public class DBManager {

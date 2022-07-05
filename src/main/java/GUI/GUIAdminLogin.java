@@ -25,7 +25,7 @@ public class GUIAdminLogin implements ActionListener {
         etiqueta.setPreferredSize(new Dimension(300,25));
         mainPanel.setPreferredSize(new Dimension(300,120));
         mainPanel.setLayout(layout);
-        continuar.addActionListener(this::actionPerformed);
+        continuar.addActionListener(this);
         mainPanel.add(password);
         password.setPreferredSize(new Dimension(280,25));
         mainPanel.add(continuar);
