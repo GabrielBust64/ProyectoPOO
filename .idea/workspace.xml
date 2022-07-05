@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6a8bb48d-e6e5-4c32-900b-c61a6cbab897" name="Changes" comment="GUI Terminada, falta debugging">
-      <change afterPath="$PROJECT_DIR$/src/main/java/EndUserInterface/GUI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/EndUserInterface/Principal.java" afterDir="false" />
+    <list default="true" id="6a8bb48d-e6e5-4c32-900b-c61a6cbab897" name="Changes" comment="GUI Usuario terminada">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/GUI/GUIAdminLogin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUI/GUIAdminLogin.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Principal/DBManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Principal/DBManager.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -49,7 +46,7 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
 }</component>
-  <component name="RunManager" selected="Application.Principal">
+  <component name="RunManager" selected="Application.Principal.Principal">
     <configuration name="GUITest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="GUI.GUITest" />
       <module name="ProyectoPOO" />
@@ -111,8 +108,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Principal" />
         <item itemvalue="Application.Principal.Principal" />
+        <item itemvalue="Application.Principal" />
         <item itemvalue="Application.GUITest" />
         <item itemvalue="Application.a" />
         <item itemvalue="Application.GUITesting" />
@@ -157,7 +154,14 @@
       <option name="project" value="LOCAL" />
       <updated>1656883822133</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="GUI Usuario terminada">
+      <created>1656986757547</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1656986757547</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -179,6 +183,7 @@
     <MESSAGE value="Acomodar clases y eliminar pruebas para que se lancen desde Principal" />
     <MESSAGE value="Avance en GUI" />
     <MESSAGE value="GUI Terminada, falta debugging" />
-    <option name="LAST_COMMIT_MESSAGE" value="GUI Terminada, falta debugging" />
+    <MESSAGE value="GUI Usuario terminada" />
+    <option name="LAST_COMMIT_MESSAGE" value="GUI Usuario terminada" />
   </component>
 </project>
