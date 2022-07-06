@@ -1,10 +1,14 @@
 package GUI;
 
+import Principal.DBManager;
+
 import javax.swing.*;
+import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableColumn;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 
 public class GUIAdmin implements ActionListener {
     private JComboBox dropHistorial;
@@ -20,6 +24,8 @@ public class GUIAdmin implements ActionListener {
     private JPanel panel;
     private SpringLayout layout;
     private JLabel labelRequests;
+    private DefaultTableModel modeloHistorial;
+    private DefaultTableModel modeloEspera;
     public GUIAdmin(Object[][] historial, String titulo, Object[][] requests) {
         layout = new SpringLayout();
         dropEspera = new JComboBox();
@@ -30,8 +36,11 @@ public class GUIAdmin implements ActionListener {
         button1 = new JButton();
         labelTabla = new JLabel("Historial");
         labelRequests = new JLabel("Espera");
-        tablaHistorial = new JTable(historial, new Object[]{"RUT","PCID","Estado","Notas"});
-        tablaEspera = new JTable(requests, new Object[]{"RUT","Estado"});
+        modeloHistorial = new DefaultTableModel(new Object[]{"RUT","PCID","Estado","Notas"},0);
+        tablaHistorial = new JTable(modeloHistorial);
+        modeloEspera = new DefaultTableModel(new Object[]{"RUT","Estado"},0);
+        tablaEspera = new JTable(modeloEspera);
+        recibirDatos(modeloHistorial,modeloEspera);
         scrollEspera = new JScrollPane(tablaEspera);
         scrollHistorial = new JScrollPane(tablaHistorial);
         // ComboBox settings
@@ -60,6 +69,8 @@ public class GUIAdmin implements ActionListener {
         panel.setPreferredSize(frame.getPreferredSize());
         panel.setBackground(Color.gray);
         setupLayout();
+        button1.addActionListener(this::actionPerformed);
+        button2.addActionListener(this::actionPerformed2);
         scrollHistorial.setPreferredSize(new Dimension(1300,930));
         scrollEspera.setPreferredSize(new Dimension(150,930));
 
@@ -99,7 +110,47 @@ public class GUIAdmin implements ActionListener {
     }
 
     @Override
-    public void actionPerformed(ActionEvent e) {
-
+    public void actionPerformed(ActionEvent enviar) {
+        ArrayList<String[]> datosHistorial = new ArrayList<>();
+        ArrayList<String[]> datosEspera = new ArrayList<>();
+        for (int i = 0; i < tablaHistorial.getRowCount(); i++) {
+            datosHistorial.add(getRow(tablaHistorial, i));
+        }
+        for (int i = 0; i < tablaEspera.getRowCount(); i++) {
+            datosEspera.add(getRow(tablaEspera, i));
+        }
+        DBManager.sendData(datosHistorial, datosEspera);
     }
+
+
+
+    public void actionPerformed2(ActionEvent recibir) {
+        recibirDatos(modeloHistorial, modeloEspera);
+    }
+
+    private void recibirDatos(DefaultTableModel modeloHistorial, DefaultTableModel modeloEspera) {
+        for (int i = 0; i < modeloEspera.getRowCount(); i++) {
+            modeloEspera.removeRow(i);
+        }
+        for (int i = 0; i < modeloHistorial.getRowCount(); i++) {
+            modeloHistorial.removeRow(i);
+        }
+        for (int i = 0; i < DBManager.getHistorial().length; i++) {
+            modeloHistorial.addRow(DBManager.getHistorial()[i]);
+        }
+        for (int i = 0; i < DBManager.getRequests().length; i++) {
+            modeloEspera.addRow(DBManager.getRequests()[i]);
+        }
+        modeloEspera.fireTableDataChanged();
+        modeloHistorial.fireTableDataChanged();
+    }
+
+    private String[] getRow(JTable tabla, int i) {
+        String[] resultado = new String[tabla.getColumnCount()];
+        for (int j = 0; j < resultado.length; j++) {
+            resultado[j] = (String) tabla.getModel().getValueAt(i,j);
+        }
+        return resultado;
+    }
+
 }

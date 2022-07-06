@@ -25,7 +25,7 @@ public class GUIAdminLogin implements ActionListener {
         etiqueta.setPreferredSize(new Dimension(300,25));
         mainPanel.setPreferredSize(new Dimension(300,120));
         mainPanel.setLayout(layout);
-        continuar.addActionListener(this::actionPerformed);
+        continuar.addActionListener(this);
         mainPanel.add(password);
         password.setPreferredSize(new Dimension(280,25));
         mainPanel.add(continuar);
@@ -61,7 +61,8 @@ public class GUIAdminLogin implements ActionListener {
         // TODO Buscar contraseña en DB
         if(DBManager.checkPassword(this.password.getPassword())){
             this.etiqueta.setText("Contraseña correcta");
-            new GUIAdmin(DBManager.getHistorial(),"Admin", DBManager.getRequests());
+            // new GUIAdmin(DBManager.getHistorial(),"Admin", DBManager.getRequests());
+            new GUIAdmin(new Object[][]{{"199002430","patata","roto","brigido"}},"Admin", DBManager.getRequests());
             mainFrame.dispose();
         }else{
             this.etiqueta.setText("Contraseña incorrecta");
