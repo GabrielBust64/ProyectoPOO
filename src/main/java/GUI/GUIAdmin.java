@@ -40,9 +40,12 @@ public class GUIAdmin implements ActionListener {
         button2 = new JButton();
         button1 = new JButton();
         labelTabla = new JLabel("Historial");
+        labelTabla.setForeground(Color.white);
         labelCantidad = new JLabel("PCs disponibles: " + DBManager.getPCQuantity());
-        labelCantidad.setPreferredSize(new Dimension(130,25));
+        labelCantidad.setPreferredSize(new Dimension(200,25));
+        labelCantidad.setForeground(Color.white);
         labelRequests = new JLabel("Espera");
+        labelRequests.setForeground(Color.white);
         modeloHistorial = new DefaultTableModel(new Object[]{"RUT","PCID","Estado","Notas"},0);
         tablaHistorial = new JTable(modeloHistorial);
         modeloEspera = new DefaultTableModel(new Object[]{"RUT","Estado"},0);
@@ -76,7 +79,7 @@ public class GUIAdmin implements ActionListener {
         panel.add(cambiarPass);
         panel.add(labelCantidad);
         panel.setPreferredSize(frame.getPreferredSize());
-        panel.setBackground(Color.gray);
+        panel.setBackground(Color.darkGray);
         setupLayout();
         button1.addActionListener(this::actionPerformed);
         button2.addActionListener(this::actionPerformed2);
@@ -195,13 +198,16 @@ class changePass implements ActionListener{
         cancelar = new JButton("Cancelar");
         cancelar.addActionListener(this::actionPerformedCancelar);
         lastPass = new JLabel("Ingrese contraseña actual");
+        lastPass.setForeground(Color.white);
         nuevaPass = new JLabel("Ingrese nueva contraseña");
+        nuevaPass.setForeground(Color.white);
         layout = new SpringLayout();
 
         // Frame Settings
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setPreferredSize(new Dimension(300,200));
         frame.add(panel, BorderLayout.CENTER);
+
 
         // Panel settings
         panel.add(passwordField);
@@ -212,7 +218,7 @@ class changePass implements ActionListener{
         panel.add(nuevaPass);
         panel.setLayout(layout);
         panel.setPreferredSize(frame.getPreferredSize());
-        panel.setBackground(Color.gray);
+
 
         setupLayout();
         frame.setTitle("Cambiar Contraseña");

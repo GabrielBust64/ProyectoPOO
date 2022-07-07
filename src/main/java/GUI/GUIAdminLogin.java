@@ -22,6 +22,7 @@ public class GUIAdminLogin implements ActionListener {
         password = new JPasswordField();
         continuar = new JButton("Continuar");
         etiqueta = new JLabel("Ingrese Contraseña de Administrador");
+        etiqueta.setForeground(Color.white);
         etiqueta.setPreferredSize(new Dimension(300,25));
         mainPanel.setPreferredSize(new Dimension(300,120));
         mainPanel.setLayout(layout);
@@ -34,7 +35,7 @@ public class GUIAdminLogin implements ActionListener {
         // Frame settings
         mainFrame.add(mainPanel, BorderLayout.CENTER);
         mainFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        mainPanel.setBackground(Color.gray);
+        mainPanel.setBackground(Color.darkGray);
         setPaddings();
 
 
