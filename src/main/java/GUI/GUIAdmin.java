@@ -8,10 +8,9 @@ import javax.swing.table.TableColumn;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.event.WindowEvent;
 import java.util.ArrayList;
 
-public class GUIAdmin implements ActionListener {
+public class GUIAdmin implements ActionListener{
     private JComboBox dropHistorial;
     private JComboBox dropEspera;
     private JScrollPane scrollHistorial;
@@ -81,7 +80,7 @@ public class GUIAdmin implements ActionListener {
         panel.setPreferredSize(frame.getPreferredSize());
         panel.setBackground(Color.darkGray);
         setupLayout();
-        button1.addActionListener(this::actionPerformed);
+        button1.addActionListener(this);
         button2.addActionListener(this::actionPerformed2);
         scrollHistorial.setPreferredSize(new Dimension(1300,930));
         scrollEspera.setPreferredSize(new Dimension(150,930));
@@ -173,10 +172,9 @@ public class GUIAdmin implements ActionListener {
         }
         return resultado;
     }
-
 }
 
-class changePass implements ActionListener{
+class changePass implements ActionListener, PopUpDialog{
     private JFrame frame;
     private JPanel panel;
     private JPasswordField passwordField;
@@ -266,13 +264,21 @@ class changePass implements ActionListener{
         if (DBManager.checkPassword(passwordField.getPassword())){
             DBManager.setPassword(passwordField2.getPassword());
             frame.dispose();
-        }else{
-            lastPass.setText("Contraseña Incorrecta");
+        }else if(passwordField.equals(passwordField2)){
+            show("La nueva contraseña debe ser distinta a la anterior");
+        }
+        else{
+            show("Contraseña Incorrecta");
         }
 
 
     }
     public void actionPerformedCancelar(ActionEvent e){
         frame.dispose();
+    }
+
+    @Override
+    public void show(String text) {
+        JOptionPane.showMessageDialog(null,text);
     }
 }

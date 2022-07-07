@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6a8bb48d-e6e5-4c32-900b-c61a6cbab897" name="Changes" comment="GUI Passover">
+    <list default="true" id="6a8bb48d-e6e5-4c32-900b-c61a6cbab897" name="Changes" comment="DB Merged">
+      <change afterPath="$PROJECT_DIR$/src/main/java/EndUserInterface/PopUpDialog.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/GUI/PopUpDialog.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DB/Conexion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DB/Conexion.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DB/DBManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DB/DBManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/EndUserInterface/GUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/EndUserInterface/GUI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/GUI/GUIAdmin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUI/GUIAdmin.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/GUI/GUIAdminLogin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUI/GUIAdminLogin.java" afterDir="false" />
     </list>
@@ -20,6 +21,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -49,8 +51,13 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="EndUserInterface" />
+    </key>
+  </component>
   <component name="RunManager" selected="Application.Principal.Principal">
-    <configuration name="GUITest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="GUI.GUITest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="GUI.GUITest" />
       <module name="ProyectoPOO" />
       <extension name="coverage">
@@ -63,8 +70,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GUITesting" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="GUI.GUITesting" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="GUI.GUITesting" />
+      <module name="ProyectoPOO" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="GUI.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GUI.a" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="GUI.a" />
       <module name="ProyectoPOO" />
       <extension name="coverage">
         <pattern>
@@ -96,26 +116,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="a" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="GUI.a" />
-      <module name="ProyectoPOO" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="GUI.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Principal.Principal" />
         <item itemvalue="Application.Principal" />
-        <item itemvalue="Application.GUITest" />
-        <item itemvalue="Application.a" />
-        <item itemvalue="Application.GUITesting" />
+        <item itemvalue="Application.GUI.GUITest" />
+        <item itemvalue="Application.GUI.a" />
+        <item itemvalue="Application.GUI.GUITesting" />
       </list>
     </recent_temporary>
   </component>
@@ -171,7 +178,14 @@
       <option name="project" value="LOCAL" />
       <updated>1657219675079</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="DB Merged">
+      <created>1657221829496</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1657221829496</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -195,6 +209,7 @@
     <MESSAGE value="GUI Terminada, falta debugging" />
     <MESSAGE value="GUI Usuario terminada" />
     <MESSAGE value="GUI Passover" />
-    <option name="LAST_COMMIT_MESSAGE" value="GUI Passover" />
+    <MESSAGE value="DB Merged" />
+    <option name="LAST_COMMIT_MESSAGE" value="DB Merged" />
   </component>
 </project>

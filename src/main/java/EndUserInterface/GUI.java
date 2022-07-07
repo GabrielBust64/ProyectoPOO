@@ -7,7 +7,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class GUI implements ActionListener {
+public class GUI implements ActionListener, PopUpDialog {
     private JLabel label;
     private SpringLayout layout;
     private JButton boton;
@@ -26,6 +26,7 @@ public class GUI implements ActionListener {
         panel.setLayout(layout);
         boton.addActionListener(this);
         label = new JLabel("Ingrese su RUT");
+        label.setForeground(Color.white);
         label.setPreferredSize(new Dimension(300,25));
         labelIncorrecto.setPreferredSize(new Dimension(200,25));
 
@@ -38,7 +39,7 @@ public class GUI implements ActionListener {
         // Frame Settings
         frame.add(panel, BorderLayout.CENTER);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        panel.setBackground(Color.gray);
+        panel.setBackground(Color.darkGray);
         setPaddings();
 
         // Finish GUI
@@ -99,14 +100,27 @@ public class GUI implements ActionListener {
         if(!checkRut(texto.getText())){
             // TODO send to DB
             if (DBManager.userHasPC(texto.getText())){
-                JOptionPane.showMessageDialog(null, "Usted aún no devuelve un PC");
-            }else {
-                JOptionPane.showMessageDialog(null,"Petición ingresada correctamente");
+                show("Usted aún no devuelve un PC");
+
+            }else if(UserHasAwaitingQuery() ){
+                show("Usted tiene una petición en espera");
+            }
+            else {
+                show("Petición ingresada correctamente. Recuerde mostrar su TUI al recibir el equipo");
                 texto.setText("");
             }
         }else{
-            JOptionPane.showMessageDialog(null,"RUT Incorrecto");
+            show("Rut Incorrecto");
         }
 
+    }
+
+    private boolean UserHasAwaitingQuery() {
+        return true;
+    }
+
+    @Override
+    public void show(String text) {
+        JOptionPane.showMessageDialog(null,text);
     }
 }
