@@ -5,10 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6a8bb48d-e6e5-4c32-900b-c61a6cbab897" name="Changes" comment="changePass completed">
+      <change afterPath="$PROJECT_DIR$/src/main/java/DB/Conexion.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/DB/DBManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DB/DBManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/EndUserInterface/GUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/EndUserInterface/GUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/GUI/GUIAdmin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUI/GUIAdmin.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,7 +40,7 @@
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
   </component>
-  <component name="RunManager" selected="Application.Principal">
+  <component name="RunManager" selected="Application.Principal.Principal">
     <configuration name="GUITest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="GUI.GUITest" />
       <module name="ProyectoPOO" />
@@ -89,8 +89,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Principal" />
         <item itemvalue="Application.Principal.Principal" />
+        <item itemvalue="Application.Principal" />
         <item itemvalue="Application.GUITest" />
         <item itemvalue="Application.GUITesting" />
       </list>
