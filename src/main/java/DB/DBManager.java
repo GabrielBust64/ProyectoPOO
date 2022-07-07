@@ -18,6 +18,14 @@ public class DBManager {
         System.out.printf(String.valueOf(password));
     }
 
+    public static String getPCQuantity() {
+        int cantidad = 69;
+        return String.valueOf(cantidad);
+    }
+
+    public static void sendRequest(String text) {
+    }
+
     private void btnConectarActionPerformed(java.awt.event.ActionEvent evt){
 
         try{

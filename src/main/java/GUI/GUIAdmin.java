@@ -8,6 +8,7 @@ import javax.swing.table.TableColumn;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.WindowEvent;
 import java.util.ArrayList;
 
 public class GUIAdmin implements ActionListener {
@@ -16,6 +17,7 @@ public class GUIAdmin implements ActionListener {
     private JScrollPane scrollHistorial;
     private JScrollPane scrollEspera;
     private JLabel labelTabla;
+    private JLabel labelCantidad;
     private JTable tablaHistorial;
     private JTable tablaEspera;
     private JFrame frame;
@@ -38,6 +40,8 @@ public class GUIAdmin implements ActionListener {
         button2 = new JButton();
         button1 = new JButton();
         labelTabla = new JLabel("Historial");
+        labelCantidad = new JLabel("PCs disponibles: " + DBManager.getPCQuantity());
+        labelCantidad.setPreferredSize(new Dimension(130,25));
         labelRequests = new JLabel("Espera");
         modeloHistorial = new DefaultTableModel(new Object[]{"RUT","PCID","Estado","Notas"},0);
         tablaHistorial = new JTable(modeloHistorial);
@@ -70,6 +74,7 @@ public class GUIAdmin implements ActionListener {
         panel.add(button1);
         panel.add(button2);
         panel.add(cambiarPass);
+        panel.add(labelCantidad);
         panel.setPreferredSize(frame.getPreferredSize());
         panel.setBackground(Color.gray);
         setupLayout();
@@ -77,8 +82,6 @@ public class GUIAdmin implements ActionListener {
         button2.addActionListener(this::actionPerformed2);
         scrollHistorial.setPreferredSize(new Dimension(1300,930));
         scrollEspera.setPreferredSize(new Dimension(150,930));
-
-
 
         frame.setTitle(titulo);
         frame.pack();
@@ -116,6 +119,9 @@ public class GUIAdmin implements ActionListener {
         layout.putConstraint(SpringLayout.NORTH, cambiarPass, 0,SpringLayout.NORTH, button1);
         layout.putConstraint(SpringLayout.SOUTH, cambiarPass,-10, SpringLayout.SOUTH, panel);
         layout.putConstraint(SpringLayout.WEST,cambiarPass,10,SpringLayout.WEST,panel);
+        // LabelCantidad
+        layout.putConstraint(SpringLayout.EAST,labelCantidad, 5,SpringLayout.WEST,button2);
+        layout.putConstraint(SpringLayout.NORTH,labelCantidad,0,SpringLayout.NORTH,button2);
     }
 
     @Override

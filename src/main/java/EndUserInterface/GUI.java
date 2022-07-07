@@ -1,5 +1,7 @@
 package EndUserInterface;
 
+import DB.DBManager;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -97,6 +99,7 @@ public class GUI implements ActionListener {
         if(!checkRut(texto.getText())){
             // TODO send to DB
             labelIncorrecto.setText("");
+            DBManager.sendRequest(texto.getText());
         }else{
             labelIncorrecto.setText("RUT Invalido");
         }

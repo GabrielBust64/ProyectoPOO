@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6a8bb48d-e6e5-4c32-900b-c61a6cbab897" name="Changes" comment="Commit de Prueba">
+    <list default="true" id="6a8bb48d-e6e5-4c32-900b-c61a6cbab897" name="Changes" comment="changePass completed">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/DB/DBManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DB/DBManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/EndUserInterface/GUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/EndUserInterface/GUI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/GUI/GUIAdmin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUI/GUIAdmin.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -39,7 +40,7 @@
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
   </component>
-  <component name="RunManager" selected="Application.Principal.Principal">
+  <component name="RunManager" selected="Application.Principal">
     <configuration name="GUITest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="GUI.GUITest" />
       <module name="ProyectoPOO" />
@@ -66,6 +67,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Principal" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="EndUserInterface.Principal" />
+      <module name="ProyectoPOO" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="EndUserInterface.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Principal.Principal" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Principal.Principal" />
       <module name="ProyectoPOO" />
@@ -75,6 +89,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Principal" />
         <item itemvalue="Application.Principal.Principal" />
         <item itemvalue="Application.GUITest" />
         <item itemvalue="Application.GUITesting" />
@@ -112,7 +127,14 @@
       <option name="project" value="LOCAL" />
       <updated>1657154099901</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="changePass completed">
+      <created>1657158158946</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1657158158946</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -134,6 +156,7 @@
     <MESSAGE value="Initial Commit" />
     <MESSAGE value="Acomodar clases y eliminar pruebas para que se lancen desde Principal" />
     <MESSAGE value="Commit de Prueba" />
-    <option name="LAST_COMMIT_MESSAGE" value="Commit de Prueba" />
+    <MESSAGE value="changePass completed" />
+    <option name="LAST_COMMIT_MESSAGE" value="changePass completed" />
   </component>
 </project>
