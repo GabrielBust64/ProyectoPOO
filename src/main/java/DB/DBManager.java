@@ -1,11 +1,57 @@
-package Principal;
+package DB;
 
+import javax.swing.*;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.math.BigInteger;
 import java.security.NoSuchAlgorithmException;
 import java.security.MessageDigest;
 
+
+
 public class DBManager {
+
+    private void btnConectarActionPerformed(java.awt.event.ActionEvent evt){
+
+        try{
+            Connection con = null;
+            con = getConnection();
+
+            PreparedStatement ps;
+            ResultSet res;
+            ps = con.prepareStatement("SELECT * FROM admin");
+            res = ps.executeQuery();
+
+            if(res.next()) {
+                JOptionPane.showMessageDialog(null,res.getString("id")+ " "+ res.getString("Usuario"));
+            }else{
+                JOptionPane.showMessageDialog(null, "No Existen Datos");
+            }
+            con.close();
+        }catch(Exception e){
+            System.out.println("error");
+
+            }
+
+        }
+
+    public static Connection getConnection(){
+        Connection con = null;
+        try{
+            Class.forName("com.mysql.jdbc.Driver");
+            con = DriverManager.getConnection("bruselas.ceisufro.cl:22", "prestador", "prestador.2022");
+            JOptionPane.showMessageDialog(null,"Conexion fallida");
+
+        }catch(Exception e){
+            System.out.println("error de conexion");
+        }
+
+        return con;
+    }
+
     public static boolean checkPassword(char[] password){
         //TODO Placeholder para el check en DB
         // Por ahora no tienen lógica y están hechos para retornar True siempre

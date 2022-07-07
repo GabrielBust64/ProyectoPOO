@@ -1,6 +1,6 @@
 package GUI;
 
-import Principal.DBManager;
+import DB.DBManager;
 
 public class GUITest {
     public static void main(String[] args) {

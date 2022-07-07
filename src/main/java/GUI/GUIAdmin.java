@@ -1,6 +1,6 @@
 package GUI;
 
-import Principal.DBManager;
+import DB.DBManager;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
