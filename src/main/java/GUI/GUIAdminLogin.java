@@ -65,7 +65,7 @@ public class GUIAdminLogin implements ActionListener {
             new GUIAdmin(new Object[][]{{"199002430","patata","roto","brigido"}},"Admin", DBManager.getRequests());
             mainFrame.dispose();
         }else{
-            this.etiqueta.setText("Contraseña incorrecta");
+            JOptionPane.showMessageDialog(null,"Contraseña Incorrecta");
         }
     }
 }

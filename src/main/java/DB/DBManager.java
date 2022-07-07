@@ -1,8 +1,6 @@
 package DB;
 
-import javax.swing.*;
 import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
@@ -14,7 +12,7 @@ import java.security.MessageDigest;
 
 public class DBManager {
     private static PreparedStatement ps;
-    private ResultSet res;
+    private static ResultSet res;
     public static void setPassword(char[] password) {
         System.out.printf(String.valueOf(password));
     }
@@ -41,9 +39,9 @@ public class DBManager {
 
         String hashFromGUI = hasher(String.valueOf(password));
         try{
-            Connection con = Conexion.getConexion();
+            Connection con = Conexion.getConnection();
             ps = con.prepareStatement("SELECT Contraseña from admin where id = ?");
-            ps.setString(hashFromDB);
+
 
         }catch(Exception e){
 
@@ -79,5 +77,14 @@ public class DBManager {
 
     public static void sendData(ArrayList<String[]> datosHistorial, ArrayList<String[]> datosEspera) {
         // TODO enviar datosHistorial y datosEspera a la BD
+    }
+
+    public static boolean userHasPC(String text) {
+        if (text.equals("199002430")){
+            return true;
+        }else {
+            return false;
+        }
+
     }
 }

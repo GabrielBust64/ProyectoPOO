@@ -98,10 +98,14 @@ public class GUI implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         if(!checkRut(texto.getText())){
             // TODO send to DB
-            labelIncorrecto.setText("");
-            DBManager.sendRequest(texto.getText());
+            if (DBManager.userHasPC(texto.getText())){
+                JOptionPane.showMessageDialog(null, "Usted aún no devuelve un PC");
+            }else {
+                JOptionPane.showMessageDialog(null,"Petición ingresada correctamente");
+                texto.setText("");
+            }
         }else{
-            labelIncorrecto.setText("RUT Invalido");
+            JOptionPane.showMessageDialog(null,"RUT Incorrecto");
         }
 
     }
