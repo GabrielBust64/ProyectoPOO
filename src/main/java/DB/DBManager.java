@@ -14,6 +14,10 @@ import java.security.MessageDigest;
 
 public class DBManager {
 
+    public static void setPassword(char[] password) {
+        System.out.printf(String.valueOf(password));
+    }
+
     private void btnConectarActionPerformed(java.awt.event.ActionEvent evt){
 
         try{
@@ -46,7 +50,7 @@ public class DBManager {
             JOptionPane.showMessageDialog(null,"Conexion fallida");
 
         }catch(Exception e){
-            System.out.println("error de conexion");
+            System.err.println("Error de conexión");
         }
 
         return con;

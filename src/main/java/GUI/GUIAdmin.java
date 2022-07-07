@@ -26,7 +26,10 @@ public class GUIAdmin implements ActionListener {
     private JLabel labelRequests;
     private DefaultTableModel modeloHistorial;
     private DefaultTableModel modeloEspera;
+    private JButton cambiarPass;
     public GUIAdmin(Object[][] historial, String titulo, Object[][] requests) {
+        cambiarPass = new JButton("Cambiar Contraseña");
+        cambiarPass.addActionListener(this::actionPerformedCambiarPass);
         layout = new SpringLayout();
         dropEspera = new JComboBox();
         dropHistorial = new JComboBox();
@@ -66,6 +69,7 @@ public class GUIAdmin implements ActionListener {
         panel.add(scrollEspera);
         panel.add(button1);
         panel.add(button2);
+        panel.add(cambiarPass);
         panel.setPreferredSize(frame.getPreferredSize());
         panel.setBackground(Color.gray);
         setupLayout();
@@ -83,10 +87,11 @@ public class GUIAdmin implements ActionListener {
 
 
 
+
     private void setupLayout() {
         // Label de Historial
         layout.putConstraint(SpringLayout.NORTH, labelTabla,10,SpringLayout.NORTH, panel);
-        layout.putConstraint(SpringLayout.WEST, labelTabla,10,SpringLayout.NORTH, panel);
+        layout.putConstraint(SpringLayout.WEST, labelTabla,10,SpringLayout.WEST, panel);
         // Label de Espera
         layout.putConstraint(SpringLayout.NORTH, labelRequests, 10, SpringLayout.NORTH,panel);
         layout.putConstraint(SpringLayout.WEST, labelRequests, 10, SpringLayout.EAST,scrollHistorial);
@@ -107,6 +112,10 @@ public class GUIAdmin implements ActionListener {
         layout.putConstraint(SpringLayout.NORTH, button2, 0, SpringLayout.NORTH, button1);
         layout.putConstraint(SpringLayout.EAST, button2, -10, SpringLayout.WEST, button1);
         layout.putConstraint(SpringLayout.SOUTH, button2,-10,SpringLayout.SOUTH,panel);
+        // Botón cambiar contraseña
+        layout.putConstraint(SpringLayout.NORTH, cambiarPass, 0,SpringLayout.NORTH, button1);
+        layout.putConstraint(SpringLayout.SOUTH, cambiarPass,-10, SpringLayout.SOUTH, panel);
+        layout.putConstraint(SpringLayout.WEST,cambiarPass,10,SpringLayout.WEST,panel);
     }
 
     @Override
@@ -121,7 +130,9 @@ public class GUIAdmin implements ActionListener {
         }
         DBManager.sendData(datosHistorial, datosEspera);
     }
-
+    private void actionPerformedCambiarPass(ActionEvent actionEvent) {
+        new changePass();
+    }
 
 
     public void actionPerformed2(ActionEvent recibir) {
@@ -153,4 +164,102 @@ public class GUIAdmin implements ActionListener {
         return resultado;
     }
 
+}
+
+class changePass implements ActionListener{
+    private JFrame frame;
+    private JPanel panel;
+    private JPasswordField passwordField;
+    private JPasswordField passwordField2;
+    private JButton continuar;
+    private JButton cancelar;
+    private JLabel lastPass;
+    private JLabel nuevaPass;
+    private SpringLayout layout;
+
+    changePass(){
+        frame = new JFrame();
+        panel= new JPanel();
+        passwordField = new JPasswordField();
+        passwordField.setPreferredSize(new Dimension(280,25));
+        passwordField2 = new JPasswordField();
+        passwordField2.setPreferredSize(new Dimension(280,25));
+        continuar = new JButton("Continuar");
+        continuar.addActionListener(this::actionPerformed);
+        cancelar = new JButton("Cancelar");
+        cancelar.addActionListener(this::actionPerformedCancelar);
+        lastPass = new JLabel("Ingrese contraseña actual");
+        nuevaPass = new JLabel("Ingrese nueva contraseña");
+        layout = new SpringLayout();
+
+        // Frame Settings
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setPreferredSize(new Dimension(300,200));
+        frame.add(panel, BorderLayout.CENTER);
+
+        // Panel settings
+        panel.add(passwordField);
+        panel.add(passwordField2);
+        panel.add(cancelar);
+        panel.add(continuar);
+        panel.add(lastPass);
+        panel.add(nuevaPass);
+        panel.setLayout(layout);
+        panel.setPreferredSize(frame.getPreferredSize());
+        panel.setBackground(Color.gray);
+
+        setupLayout();
+        frame.setTitle("Cambiar Contraseña");
+        frame.pack();
+        frame.setLocationRelativeTo(null);
+        frame.setVisible(true);
+
+    }
+
+    private void setupLayout() {
+        // LastPass label
+        layout.putConstraint(SpringLayout.NORTH,lastPass,10,SpringLayout.NORTH, panel);
+        layout.putConstraint(SpringLayout.WEST,lastPass,10,SpringLayout.WEST,panel);
+        layout.putConstraint(SpringLayout.EAST,lastPass,-10,SpringLayout.EAST,panel);
+
+        // PasswordField
+        layout.putConstraint(SpringLayout.NORTH,passwordField,5,SpringLayout.SOUTH,lastPass);
+        layout.putConstraint(SpringLayout.WEST,passwordField,0,SpringLayout.WEST,lastPass);
+        layout.putConstraint(SpringLayout.EAST,passwordField,-10,SpringLayout.EAST,panel);
+
+        // NewPass label
+        layout.putConstraint(SpringLayout.NORTH, nuevaPass,5,SpringLayout.SOUTH, passwordField);
+        layout.putConstraint(SpringLayout.WEST, nuevaPass,0,SpringLayout.WEST,passwordField);
+        layout.putConstraint(SpringLayout.EAST,nuevaPass,-10,SpringLayout.EAST,panel);
+
+        // PasswordField2
+        layout.putConstraint(SpringLayout.NORTH,passwordField2,5,SpringLayout.SOUTH,nuevaPass);
+        layout.putConstraint(SpringLayout.WEST,passwordField2,0,SpringLayout.WEST,nuevaPass);
+        layout.putConstraint(SpringLayout.EAST,passwordField2,-10,SpringLayout.EAST,panel);
+
+        // Continuar botón
+        layout.putConstraint(SpringLayout.EAST,continuar,0,SpringLayout.EAST,passwordField2);
+        layout.putConstraint(SpringLayout.NORTH,continuar,5,SpringLayout.SOUTH,passwordField2);
+        layout.putConstraint(SpringLayout.SOUTH,continuar,-10,SpringLayout.SOUTH,panel);
+
+        // Cancelar botón
+        layout.putConstraint(SpringLayout.NORTH,cancelar,0,SpringLayout.NORTH,continuar);
+        layout.putConstraint(SpringLayout.EAST,cancelar,-5,SpringLayout.WEST,continuar);
+        layout.putConstraint(SpringLayout.SOUTH,cancelar,-10,SpringLayout.SOUTH,panel);
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        if (DBManager.checkPassword(passwordField.getPassword())){
+            DBManager.setPassword(passwordField2.getPassword());
+            frame.dispose();
+        }else{
+            lastPass.setText("Contraseña Incorrecta");
+        }
+
+
+    }
+    public void actionPerformedCancelar(ActionEvent e){
+        frame.dispose();
+    }
 }
