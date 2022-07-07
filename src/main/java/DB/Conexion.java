@@ -1,25 +1,28 @@
 package DB;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
+import java.sql.*;
 
 public class Conexion {
-    public static Connection connection = null;
-    public static Connection getConnection(){
+    Connection con;
+    PreparedStatement ps;
+    Statement statement;
+    ResultSet res;
+    public void conectar(){
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-        } catch (Exception ex) {
-            System.err.println("Error");
-        }
-        try {
-            connection = DriverManager.getConnection("jdbc:mysql://bruselas.ceisufro.cl/ProyectoPOO", "prestador", "Prestador.2022");
+            con = DriverManager.getConnection("jdbc:mysql://bruselas.ceisufro.cl:22/ProyectoPOO", "prestador", "Prestador.2022");
+            statement = con.createStatement();
             System.out.println("conectado");
-        } catch (SQLException e) {
+            con.close();
+
+        }catch (ClassNotFoundException | SQLException e) {
+            e.printStackTrace();
             System.err.println("Error en la conexión");
             System.err.println("SQLException: " + e.getMessage());
         }
+    }
 
-        return connection;
+    public Connection getCon() {
+        return con;
     }
 }

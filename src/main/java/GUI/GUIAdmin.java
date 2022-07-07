@@ -29,7 +29,7 @@ public class GUIAdmin implements ActionListener {
     private DefaultTableModel modeloHistorial;
     private DefaultTableModel modeloEspera;
     private JButton cambiarPass;
-    public GUIAdmin(Object[][] historial, String titulo, Object[][] requests) {
+    public GUIAdmin() {
         cambiarPass = new JButton("Cambiar Contraseña");
         cambiarPass.addActionListener(this::actionPerformedCambiarPass);
         layout = new SpringLayout();
@@ -50,7 +50,7 @@ public class GUIAdmin implements ActionListener {
         tablaHistorial = new JTable(modeloHistorial);
         modeloEspera = new DefaultTableModel(new Object[]{"RUT","Estado"},0);
         tablaEspera = new JTable(modeloEspera);
-        recibirDatos(modeloHistorial,modeloEspera);
+
         scrollEspera = new JScrollPane(tablaEspera);
         scrollHistorial = new JScrollPane(tablaHistorial);
         // ComboBox settings
@@ -86,9 +86,10 @@ public class GUIAdmin implements ActionListener {
         scrollHistorial.setPreferredSize(new Dimension(1300,930));
         scrollEspera.setPreferredSize(new Dimension(150,930));
 
-        frame.setTitle(titulo);
+        frame.setTitle("Admin");
         frame.pack();
         frame.setVisible(true);
+        recibirDatos(modeloHistorial,modeloEspera);
     }
 
 
